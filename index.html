@@ -1677,15 +1677,7 @@ body.nospin .disc{animation:none}
   if('serviceWorker' in navigator && /^https?:$/.test(location.protocol)){
     window.addEventListener('load', function(){ navigator.serviceWorker.register('sw.js').catch(function(){}); });
   }
-  document.addEventListener('visibilitychange', function () {
-
-  if (!document.hidden && actx && actx.state === 'suspended') {
-
-    actx.resume().catch(function(){});
-
-  }
-
-});
+  
 })();
 </script>
 </body>
